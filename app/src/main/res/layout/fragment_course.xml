@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/seach"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sp_nf"
+            android:layout_width="0dp"
+            style="@style/select_nianfen"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:overlapAnchor="false"></Spinner>
+
+        <Spinner
+            android:id="@+id/sp_xq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:overlapAnchor="false"></Spinner>
+
+        <Button
+            android:id="@+id/seach_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#fff"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_bg_query"
+            android:text="查询" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignBottom="@+id/viewpager"
+        android:layout_alignParentLeft="true"
+        android:background="#ccc" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar_course"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <!--android:drawableTop="@drawable/"-->
+        <RadioButton
+            android:id="@+id/rb_monday"
+            style="@style/tab_menu_item1"
+            android:text="一" />
+
+        <RadioButton
+            android:id="@+id/rb_tuesday"
+            style="@style/tab_menu_item1"
+            android:text="二" />
+
+        <RadioButton
+            android:id="@+id/rb_wednesday"
+            style="@style/tab_menu_item1"
+            android:text="三" />
+
+        <RadioButton
+            android:id="@+id/rb_thursday"
+            style="@style/tab_menu_item1"
+            android:text="四" />
+
+        <RadioButton
+            android:id="@+id/rb_friday"
+            style="@style/tab_menu_item1"
+            android:text="五" />
+
+        <RadioButton
+            android:id="@+id/rb_saturday"
+            style="@style/tab_menu_item1"
+            android:text="六" />
+
+        <RadioButton
+            android:id="@+id/rb_sunday"
+            style="@style/tab_menu_item1"
+            android:text="日" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignBottom="@+id/viewpager"
+        android:layout_alignParentLeft="true"
+        android:background="#ccc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_course"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rg_tab_bar"
+            android:layout_below="@+id/top_title"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+
+</LinearLayout>

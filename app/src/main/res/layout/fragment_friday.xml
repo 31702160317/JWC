@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/viewpager"
+            android:layout_alignParentLeft="true"
+            android:background="#ccc" />
+
+        <ListView
+            android:id="@+id/list_monday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/viewpager"
+            android:layout_alignParentLeft="true"
+            android:background="#ccc" />
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/viewpager"
+        android:layout_alignParentLeft="true"
+        android:background="#ccc" />
+</LinearLayout>
