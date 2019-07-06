@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         fragments.add(new InfoFragment());
         adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), fragments);//初始化adapter
         pager = (ViewPager) findViewById(R.id.viewpager);//设置ViewPager
-        pager.setOffscreenPageLimit(2);
+        pager.setOffscreenPageLimit(3);
         pager.setAdapter(adapter);
         pager.setCurrentItem(0);
         pager.setOnPageChangeListener(this);

@@ -165,10 +165,10 @@ public class CourseFragment extends Fragment implements RadioGroup.OnCheckedChan
               //判断星期假如当天是星期一就跳到星期二，否则默认跳到星期一
                 String mondayCheckRadioId="2131427450";
                 String CurrentRadioId=radioGroup.getCheckedRadioButtonId()+"";
-             ;
+             HttpUtils.loge("FJFFJ",CurrentRadioId);
                 if ((mWay=="2")||(mondayCheckRadioId.equals(CurrentRadioId))){
-                    rb_tuesday.setChecked(true);
-                    pager_course.setCurrentItem(1);
+                    rb_saturday.setChecked(true);
+                    pager_course.setCurrentItem(5);
                 }else{
                     rb_monday.setChecked(true);
                     pager_course.setCurrentItem(0);
