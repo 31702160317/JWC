@@ -2,6 +2,8 @@ package cn.mmvtc.mmvtc.CourseFragments;
 
 
 import android.content.SharedPreferences;
+import android.graphics.ImageFormat;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -12,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import com.ant.liao.GifView;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -48,7 +52,7 @@ public class FirdayFragment extends Fragment {
 
     private int column = 5;  //表格当前列数
     private SharedPreferences sp;
-
+    private GifView gifView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -57,7 +61,7 @@ public class FirdayFragment extends Fragment {
         sp = getContext().getSharedPreferences("data", getContext().MODE_PRIVATE);
       /*  HttpUtils.loge("xueqi1111",xueqi);
         HttpUtils.loge("xuenian1111",xuenian);*/
-
+        //gifView= (GifView)v. findViewById(R.id.week);
 
         courseUrl = MainActivity.getCourseUrl();
         cookie = MainActivity.getCookie();
@@ -72,6 +76,7 @@ public class FirdayFragment extends Fragment {
 
     Handler handler = new Handler() {
         public void handleMessage(android.os.Message msg) {
+
 
             adapter.notifyDataSetChanged();
         }

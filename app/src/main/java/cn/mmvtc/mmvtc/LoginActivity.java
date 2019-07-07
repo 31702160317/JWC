@@ -19,6 +19,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.ant.liao.GifView;
+
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -38,7 +41,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private LoginInfo loginInfo = new LoginInfo();
     private String switchVertifyUrl="http://jwc.mmvtc.cn/CheckCode.aspx";
     private String LoginUrl="http://jwc.mmvtc.cn/default2.aspx";
-
+    private GifView bg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +98,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     //初始化控件
     private void initView() {
+        /*bg= (GifView) findViewById(R.id.bg);
+        bg.setGifImage(R.drawable.bg1);
+
+        bg.setGifImageType(GifView.GifImageType.SYNC_DECODER);*/
         et_user = (EditText) findViewById(R.id.et_user);
         et_password = (EditText) findViewById(R.id.et_password);
         et_vertify = (EditText) findViewById(R.id.et_vertify);

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MMVTC</string>
+    <string name="app_name">茂职教务网</string>
     <string name="user">用户名：</string>
     <string name="password">密码：</string>
     <string name="yzm">验证码：</string>

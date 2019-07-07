@@ -162,20 +162,22 @@ public class CourseFragment extends Fragment implements RadioGroup.OnCheckedChan
                 editor.putString("xuenian", valueNF);
                 editor.putString("xueqi", valueXQ);
                 editor.commit();
-              //判断星期假如当天是星期一就跳到星期二，否则默认跳到星期一
+              //判断星期假如当天是星期一又不能靠近星期一因为不刷新就跳到星期五，否则默认跳到星期一
                 String mondayCheckRadioId="2131427450";
+                String tuesdayCheckRadioId="2131427451";
                 String CurrentRadioId=radioGroup.getCheckedRadioButtonId()+"";
-             HttpUtils.loge("FJFFJ",CurrentRadioId);
-                if ((mWay=="2")||(mondayCheckRadioId.equals(CurrentRadioId))){
-                    rb_saturday.setChecked(true);
-                    pager_course.setCurrentItem(5);
+
+                //当天是星期一，或者按钮在星期一 因为星期二靠近星期一不会刷新，则跳到星期五
+                if (((mWay=="2")||(mondayCheckRadioId.equals(CurrentRadioId))) || tuesdayCheckRadioId.equals(CurrentRadioId)){
+                    rb_friday.setChecked(true);
+                    pager_course.setCurrentItem(4);
                 }else{
                     rb_monday.setChecked(true);
                     pager_course.setCurrentItem(0);
                 }
 
                 //登录成功
-                ToastUtil.showToast(getContext(),"防止错误点击其他星期更精确");
+               // ToastUtil.showToast(getContext(),"防止错误点击其他星期更精确");
 
             }
         });

@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.ant.liao.GifView;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -46,6 +48,7 @@ public class SaturdayFragment extends Fragment {
     private int column=6;  //表格当前列数
     private SharedPreferences sp;
     private String viewstate = "";
+    private GifView gifView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -54,6 +57,7 @@ public class SaturdayFragment extends Fragment {
         sp = getContext().getSharedPreferences("data", getContext().MODE_PRIVATE);
         courseUrl= MainActivity.getCourseUrl();
         cookie=MainActivity.getCookie();
+        //gifView= (GifView)v. findViewById(R.id.week);
         HttpUtils.loge("courseUrl",cookie);
         new Thread(runnable).start();
         listView = (ListView) v.findViewById(R.id.list_monday);
